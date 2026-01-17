@@ -1,0 +1,194 @@
+{
+    "credit_score": {
+        "name": "Credit Score",
+        "label": "credit_score",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "payment_history": {
+        "name": "Payment History",
+        "label": "payment_history",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "loan_inquiries": {
+        "name": "Loan Inquiries",
+        "label": "loan_inquiries",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "total_obligations": {
+        "name": "Total Obligations",
+        "label": "total_obligations",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "residential_proof": {
+        "name": "Residential Proof",
+        "label": "residential_proof",
+        "is_required": "required",
+        "extensions": "jpg,jpeg,png,pdf",
+        "options": [],
+        "type": "file"
+    },
+    "contact_references": {
+        "name": "Contact References",
+        "label": "contact_references",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "age_limit": {
+        "name": "Age Limit",
+        "label": "age_limit",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "pan_card": {
+        "name": "Pan Card",
+        "label": "pan_card",
+        "is_required": "required",
+        "extensions": "jpg,jpeg,png,pdf",
+        "options": [],
+        "type": "file"
+    },
+    "aadhar_photo_front": {
+        "name": "Aadhar Photo Front",
+        "label": "aadhar_photo_front",
+        "is_required": "required",
+        "extensions": "jpg,jpeg,png,pdf",
+        "options": [],
+        "type": "file"
+    },
+    "aadhar_photo_back": {
+        "name": "Aadhar Photo Back",
+        "label": "aadhar_photo_back",
+        "is_required": "required",
+        "extensions": "jpg,jpeg,png,pdf",
+        "options": [],
+        "type": "file"
+    },
+    "current_address": {
+        "name": "Current Address",
+        "label": "current_address",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "locality_village_current": {
+        "name": "Locality/Village (Current)",
+        "label": "locality_village_current",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "near_landmark_current": {
+        "name": "Near Landmark (Current)",
+        "label": "near_landmark_current",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "tehsil_taluka_current": {
+        "name": "Tehsil/Taluka (Current)",
+        "label": "tehsil_taluka_current",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "city_district_current": {
+        "name": "City/District (Current)",
+        "label": "city_district_current",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "state_current": {
+        "name": "State (Current)",
+        "label": "state_current",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "pin_code_current": {
+        "name": "Pin Code (Current)",
+        "label": "pin_code_current",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "permanent_address": {
+        "name": "Permanent Address",
+        "label": "permanent_address",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "locality_village_permanent": {
+        "name": "Locality/Village (Permanent)",
+        "label": "locality_village_permanent",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "near_landmark_permanent": {
+        "name": "Near Landmark (Permanent)",
+        "label": "near_landmark_permanent",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "tehsil_taluka_permanent": {
+        "name": "Tehsil/Taluka (Permanent)",
+        "label": "tehsil_taluka_permanent",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "city_district_permanent": {
+        "name": "City/District (Permanent)",
+        "label": "city_district_permanent",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "state_permanent": {
+        "name": "State (Permanent)",
+        "label": "state_permanent",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    },
+    "pin_code_permanent": {
+        "name": "Pin Code (Permanent)",
+        "label": "pin_code_permanent",
+        "is_required": "required",
+        "extensions": null,
+        "options": [],
+        "type": "text"
+    }
+}

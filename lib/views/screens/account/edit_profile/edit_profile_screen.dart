@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:finovelapp/core/utils/my_color.dart';
+import 'package:finovelapp/core/utils/my_strings.dart';
+import 'package:finovelapp/data/controller/account/profile_controller.dart';
+import 'package:finovelapp/data/repo/account/profile_repo.dart';
+import 'package:finovelapp/data/services/api_service.dart';
+import 'package:finovelapp/views/components/appbar/custom_appbar.dart';
+import 'package:finovelapp/views/components/custom_loader.dart';
+
+import 'widget/edit_profile_form.dart';
+
+class EditProfileScreen extends StatefulWidget {
+  const EditProfileScreen({super.key});
+
+  @override
+  State<EditProfileScreen> createState() => _EditProfileScreenState();
+}
+
+class _EditProfileScreenState extends State<EditProfileScreen> {
+  @override
+  void initState() {
+    Get.put(ApiClient(sharedPreferences: Get.find()));
+    Get.put(ProfileRepo(apiClient: Get.find()));
+    final controller = Get.put(ProfileController(profileRepo: Get.find()));
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      controller.loadProfileInfo();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+      },
+      child: Scaffold(
+        backgroundColor: MyColor.getScreenBgColor(),
+        appBar: CustomAppBar(
+            isShowBackBtn: true,
+            title: MyStrings.editProfile.tr,
+            bgColor: MyColor.getAppbarBgColor()),
+        body: GetBuilder<ProfileController>(
+          builder: (controller) => controller.isLoading
+              ? const CustomLoader()
+              : const SingleChildScrollView(
+                  padding: EdgeInsets.symmetric(vertical: 30, horizontal: 15),
+                  child: EditProfileForm(),
+                ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,187 @@
+class AddNewLeadResponseModel {
+  AddNewLeadResponseModel({
+    String? status,
+    Message? message,
+    Data? data,
+  }) {
+    _status = status;
+    _message = message;
+    _data = data;
+  }
+
+  AddNewLeadResponseModel.fromJson(dynamic json) {
+    _status = json['status'];
+    _message = json['message'] != null ? Message.fromJson(json['message']) : null;
+    _data = json['data'] != null ? Data.fromJson(json['data']) : null;
+  }
+
+  String? _status;
+  Message? _message;
+  Data? _data;
+
+  String? get status => _status;
+  Message? get message => _message;
+  Data? get data => _data;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['status'] = _status;
+    if (_message != null) {
+      map['message'] = _message?.toJson();
+    }
+    if (_data != null) {
+      map['data'] = _data?.toJson();
+    }
+    return map;
+  }
+}
+
+class Message {
+  Message({
+    List<String>? success,
+    List<String>? error,
+  }) {
+    _success = success;
+    _error = error;
+  }
+
+  Message.fromJson(dynamic json) {
+    _success = json['success'] != null ? List<String>.from(json['success']) : null;
+    _error = json['error'] != null ? List<String>.from(json['error']) : null;
+  }
+
+  List<String>? _success;
+  List<String>? _error;
+
+  List<String>? get success => _success;
+  List<String>? get error => _error;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    if (_success != null) {
+      map['success'] = _success;
+    }
+    if (_error != null) {
+      map['error'] = _error;
+    }
+    return map;
+  }
+}
+
+class Data {
+  Data({
+    int? id,
+    int? userId,
+    String? fullName,
+    String? mobileNumber,
+    String? emailId,
+    String? pancardNumber,
+    String? aadharNumber,
+    String? areaPincode,
+    String? requirementType,
+    String? monthlyIncome,
+    String? sourceOfIncome,
+    String? loanAmount,
+    String? leadType,
+    String? referralCode,
+    String? createdAt,
+    String? status,
+    int? customerId,
+  }) {
+    _id = id;
+    _userId = userId;
+    _fullName = fullName;
+    _mobileNumber = mobileNumber;
+    _emailId = emailId;
+    _pancardNumber = pancardNumber;
+    _aadharNumber = aadharNumber;
+    _areaPincode = areaPincode;
+    _requirementType = requirementType;
+    _monthlyIncome = monthlyIncome;
+    _sourceOfIncome = sourceOfIncome;
+    _loanAmount = loanAmount;
+    _leadType = leadType;
+    _referralCode = referralCode;
+    _createdAt = createdAt;
+    _status = status;
+    _customerId = customerId;
+  }
+
+  Data.fromJson(dynamic json) {
+    _id = json['id'];
+    _userId = json['user_id'];
+    _fullName = json['full_name'];
+    _mobileNumber = json['mobile_number'];
+    _emailId = json['email_id'];
+    _pancardNumber = json['pancard_number'];
+    _aadharNumber = json['aadhar_number'];
+    _areaPincode = json['area_pincode'];
+    _requirementType = json['requirement_type'];
+    _monthlyIncome = json['monthly_income'];
+    _sourceOfIncome = json['source_of_income'];
+    _loanAmount = json['loan_amount'];
+    _leadType = json['lead_type'];
+    _referralCode = json['referral_code'];
+    _createdAt = json['created_at'];
+    _status = json['status'];
+    _customerId = json['customer_id'];
+  }
+
+  int? _id;
+  int? _userId;
+  String? _fullName;
+  String? _mobileNumber;
+  String? _emailId;
+  String? _pancardNumber;
+  String? _aadharNumber;
+  String? _areaPincode;
+  String? _requirementType;
+  String? _monthlyIncome;
+  String? _sourceOfIncome;
+  String? _loanAmount;
+  String? _leadType;
+  String? _referralCode;
+  String? _createdAt;
+  String? _status;
+  int? _customerId;
+
+  int? get id => _id;
+  int? get userId => _userId;
+  String? get fullName => _fullName;
+  String? get mobileNumber => _mobileNumber;
+  String? get emailId => _emailId;
+  String? get pancardNumber => _pancardNumber;
+  String? get aadharNumber => _aadharNumber;
+  String? get areaPincode => _areaPincode;
+  String? get requirementType => _requirementType;
+  String? get monthlyIncome => _monthlyIncome;
+  String? get sourceOfIncome => _sourceOfIncome;
+  String? get loanAmount => _loanAmount;
+  String? get leadType => _leadType;
+  String? get referralCode => _referralCode;
+  String? get createdAt => _createdAt;
+  String? get status => _status;
+  int? get customerId => _customerId;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['id'] = _id;
+    map['user_id'] = _userId;
+    map['full_name'] = _fullName;
+    map['mobile_number'] = _mobileNumber;
+    map['email_id'] = _emailId;
+    map['pancard_number'] = _pancardNumber;
+    map['aadhar_number'] = _aadharNumber;
+    map['area_pincode'] = _areaPincode;
+    map['requirement_type'] = _requirementType;
+    map['monthly_income'] = _monthlyIncome;
+    map['source_of_income'] = _sourceOfIncome;
+    map['loan_amount'] = _loanAmount;
+    map['lead_type'] = _leadType;
+    map['referral_code'] = _referralCode;
+    map['created_at'] = _createdAt;
+    map['status'] = _status;
+    map['customer_id'] = _customerId;
+    return map;
+  }
+}

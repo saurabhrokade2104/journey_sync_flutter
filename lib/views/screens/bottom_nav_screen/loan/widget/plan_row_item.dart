@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:finovelapp/core/utils/dimensions.dart';
+import 'package:finovelapp/core/utils/my_color.dart';
+import 'package:finovelapp/core/utils/my_images.dart';
+import 'package:finovelapp/core/utils/style.dart';
+
+class PlanRow extends StatelessWidget {
+  final String firstText, secondText;
+  final double space;
+
+  const PlanRow(
+      {super.key,
+      required this.firstText,
+      required this.secondText,
+      this.space = 12});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Image.asset(MyImages.check, height: 15, width: 15),
+                const SizedBox(width: Dimensions.space10),
+                Text(firstText.tr,
+                    style: interRegularDefault.copyWith(
+                        color: MyColor.smallTextColor1)),
+              ],
+            ),
+            Flexible(
+                child: Text(secondText.tr,
+                    overflow: TextOverflow.ellipsis,
+                    style: interRegularDefault.copyWith(
+                        fontWeight: FontWeight.w500))),
+          ],
+        ),
+        SizedBox(height: space)
+      ],
+    );
+  }
+}
